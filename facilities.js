@@ -314,4 +314,360 @@ const facilities = [
     icon: redIcon,
     popup: "See Oak Grove Sanitarium"
   },
+
+  // Allen Sanitarium
+  {
+    name: "Allen Sanitarium",
+    lat: 43.020435098764914,
+    lng: -83.69718679509764,
+    start: 1894,
+    end: 1901,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Flint Sanitarium<br>For previous uses of the facility, see Flint Sanitarium"
+  },
+
+  // Cook's Hospital
+  {
+    name: "Cook's Hospital / Cooke's Hospital",
+    lat: 43.008337154580644,
+    lng: -83.68549839856323,
+    start: 1898,
+    end: 1900,
+    status: "active",
+    icon: greenIcon,
+    popup: "Cook's Hospital / Cooke's Hospital"
+  },
+  {
+    name: "Cook's Hospital / Cooke's Hospital",
+    lat: 43.008337154580644,
+    lng: -83.68549839856323,
+    start: 1900,
+    end: 9999,
+    status: "closed",
+    icon: redIcon,
+    popup: "See Cook's Hospital / Cooke's Hospital"
+  },
+
+  // Flint Sanitarium
+  {
+    name: "Flint City Hospital",
+    lat: 43.012515594038724,
+    lng: -83.68934252713885,
+    start: 1900,
+    end: 1901,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Flint City Hospital"
+  },
+  {
+    name: "Flint City Hospital",
+    lat: 43.012515594038724,
+    lng: -83.68934252713885,
+    start: 1901,
+    end: 9999,
+    status: "moved",
+    icon: yellowIcon,
+    popup: "See Flint City Hospital"
+  },
+  {
+    name: "Flint City Hospital",
+    lat: 43.020435098764914,
+    lng: -83.69718679509764,
+    start: 1901,
+    end: 1907,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Flint City Hospital<>For previous uses of the facility, see Allen Sanitarium<br>For previous uses of the facility, see Flint Sanitarium"
+  },
+  {
+    name: "Flint City Hospital",
+    lat: 43.020435098764914,
+    lng: -83.69718679509764,
+    start: 1907,
+    end: 9999,
+    status: "closed",
+    icon: redIcon,
+    popup: "See Flint City Hospital<>For previous uses of the facility, see Allen Sanitarium<br>For previous uses of the facility, see Flint Sanitarium"
+  },
+
+  // Contagious Disease Hospital
+  {
+    name: "Contagious Disease Hospital",
+    lat: 42.9961305104667,
+    lng: -83.67776333279085,
+    start: 1901,
+    end: 1902,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Contagious Disease Hospital"
+  },
+  {
+    name: "Contagious Disease Hospital",
+    lat: 42.9961305104667,
+    lng: -83.67776333279085,
+    start: 1902,
+    end: 9999,
+    status: "moved",
+    icon: yellowIcon,
+    popup: "See Contagious Disease Hospital"
+  },
+  {
+    name: "Contagious Disease Hospital",
+    lat: 43.02531738459441,
+    lng: -83.67404236203457,
+    start: 1901,
+    end: 1917,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Contagious Disease Hospital"
+  },
+  {
+    name: "Contagious Disease Hospital",
+    lat: 43.02531738459441,
+    lng: -83.67404236203457,
+    start: 1917,
+    end: 9999,
+    status: "closed",
+    icon: redIcon,
+    popup: "See Contagious Disease Hospital"
+  },
+
+  {
+    name: "Detention Hospital",
+    lat: 43.017362861284944,
+    lng: -83.69348902139981,
+    start: 1901,
+    end: 1902,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Detention Hospital"
+  },
+  {
+    name: "Detention Hospital",
+    lat: 43.017362861284944,
+    lng: -83.69348902139981,
+    start: 1902,
+    end: 9999,
+    status: "closed",
+    icon: redIcon,
+    popup: "See Detention Hospital"
+  },
+
+  {
+    name: "Otter Lake Medical and Surgical Sanitarium",
+    lat: 43.22123016755925,
+    lng: -83.45920835116783,
+    start: 1904,
+    end: 1923,
+    status: "active",
+    icon: greenIcon,
+    popup: "See American Legion Billet"
+  },
+  {
+    name: "Otter Lake Medical and Surgical Sanitarium",
+    lat: 43.22123016755925,
+    lng: -83.45920835116783,
+    start: 1923,
+    end: 1924,
+    status: "closed",
+    icon: redIcon,
+    popup: "See American Legion Billet"
+  },
+  {
+    name: "American Legion Billet",
+    lat: 43.22123016755925,
+    lng: -83.45920835116783,
+    start: 1924,
+    end: 1977,
+    status: "active",
+    icon: greenIcon,
+    popup: "See American Legion Billet"
+  },
+  {
+    name: "American Legion Billet",
+    lat: 43.22123016755925,
+    lng: -83.45920835116783,
+    start: 1977,
+    end: 9999,
+    status: "closed",
+    icon: redIcon,
+    popup: "See American Legion Billet"
+  },
+
+  {
+    name: "Hurley Medical Center",
+    lat: 43.02151802282558,
+    lng: -83.70497004740344,
+    start: 1908,
+    end: 9999,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Hurley Medical Center"
+  },
+
+  {
+    name: "Oak Park Hospital",
+    lat: 43.040961349521154,
+    lng: -83.69102802717755,
+    start: 1910,
+    end: 1912,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Oak Glen Maternity Home"
+  },
+  {
+    name: "Thomas Medical and Surgical Sanitarium",
+    lat: 43.040961349521154,
+    lng: -83.69102802717755,
+    start: 1912,
+    end: 1917,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Oak Glen Maternity Home"
+  },
+  {
+    name: "Oak Glen Maternity Home",
+    lat: 43.040961349521154,
+    lng: -83.69102802717755,
+    start: 1917,
+    end: 1920,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Oak Glen Maternity Home"
+  },
+  {
+    name: "Oak Glen Maternity Home",
+    lat: 43.040961349521154,
+    lng: -83.69102802717755,
+    start: 1920,
+    end: 9999,
+    status: "closed",
+    icon: redIcon,
+    popup: "See Oak Glen Maternity Home"
+  },
+
+  {
+    name: "Lawrence Hospital / Lawrence Chautauqua Hospital",
+    lat: 43.03876462738867,
+    lng: -83.6961015456212,
+    start: 1915,
+    end: 1919,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Lawrence Hospital / Lawrence Chautauqua Hospital"
+  },
+  {
+    name: "Lawrence Hospital / Lawrence Chautauqua Hospital",
+    lat: 43.03876462738867,
+    lng: -83.6961015456212,
+    start: 1919,
+    end: 9999,
+    status: "closed",
+    icon: redIcon,
+    popup: "See Lawrence Hospital / Lawrence Chautauqua Hospital"
+  },
+
+  {
+    name: "General Motors Emergency Hospital",
+    lat: 43.03576576240505,
+    lng: -83.68980457744294,
+    start: 1916,
+    end: 1919,
+    status: "active",
+    icon: greenIcon,
+    popup: "See General Motors Emergency Hospital"
+  },
+  {
+    name: "General Motors Emergency Hospital",
+    lat: 43.03576576240505,
+    lng: -83.68980457744294,
+    start: 1919,
+    end: 9999,
+    status: "closed",
+    icon: redIcon,
+    popup: "See General Motors Emergency Hospital"
+  },
+
+  {
+    name: "Nemo Hospital",
+    lat: 43.009107834307734,
+    lng: -83.68189304345609,
+    start: 1916,
+    end: 1917,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Nemo Hospital"
+  },
+  {
+    name: "Nemo Hospital",
+    lat: 43.009107834307734,
+    lng: -83.68189304345609,
+    start: 1917,
+    end: 9999,
+    status: "closed",
+    icon: redIcon,
+    popup: "See Nemo Hospital"
+  },
+
+  {
+    name: "Goodrich General Hospital",
+    lat: 42.916596215525026,
+    lng: -83.50886377178739,
+    start: 1916,
+    end: 1962,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Genesys Wheelock Memorial Hospital"
+  },
+  {
+    name: "Goodrich General Hospital",
+    lat: 42.916596215525026,
+    lng: -83.50886377178739,
+    start: 1962,
+    end: 1964,
+    status: "closed",
+    icon: redIcon,
+    popup: "See Genesys Wheelock Memorial Hospital"
+  },
+  {
+    name: "Goodrich General Hospital",
+    lat: 42.916596215525026,
+    lng: -83.50886377178739,
+    start: 1964,
+    end: 9999,
+    status: "moved",
+    icon: yellowIcon,
+    popup: "See Genesys Wheelock Memorial Hospital"
+  },
+  {
+    name: "Wheelock Memorial Hospital",
+    lat: 42.925209765484745,
+    lng: -83.5041645202944,
+    start: 1964,
+    end: 1992,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Genesys Wheelock Memorial Hospital"
+  },
+  {
+    name: "Genesys Wheelock Memorial Hospital",
+    lat: 42.925209765484745,
+    lng: -83.5041645202944,
+    start: 1992,
+    end: 1998,
+    status: "active",
+    icon: greenIcon,
+    popup: "See Genesys Wheelock Memorial Hospital"
+  },
+  {
+    name: "Genesys Wheelock Memorial Hospital",
+    lat: 42.925209765484745,
+    lng: -83.5041645202944,
+    start: 1998,
+    end: 9999,
+    status: "closed",
+    icon: redIcon,
+    popup: "See Genesys Wheelock Memorial Hospital"
+  },
 ];
