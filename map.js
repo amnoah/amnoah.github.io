@@ -56,8 +56,8 @@ function updateFilters() {
 
         const marker = L.marker(
           [f.lat, f.lng],
-          { icon: f.icon }
-        ).bindPopup(f.popup);
+          { icon: statusIcons[f.status] }
+        ).bindPopup(f.name + "<br>" + f.popup);
 
         allMarkers.addLayer(marker);
 

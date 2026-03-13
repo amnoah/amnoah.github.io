@@ -36,6 +36,15 @@ var purpleIcon = L.icon({
   shadowSize: [41,41]
 });
 
+// --- STATUS TO ICON MAP ---
+
+const statusIcons = {
+  active: greenIcon,
+  closed: redIcon,
+  moved: yellowIcon,
+  proposed: purpleIcon
+};
+
 // --- FACILITIES ---
 
 const facilities = [
@@ -52,8 +61,7 @@ const facilities = [
     start: 1847,
     end: 1928,
     status: "active",
-    icon: greenIcon,
-    popup: "Genesee County House/Farm<br>See Walter Winchester Unit of Genesee Memorial Hospital"
+    popup: "See Walter Winchester Unit of Genesee Memorial Hospital"
   },
   {
     name: "Genesee County Infirmary",
@@ -62,8 +70,7 @@ const facilities = [
     start: 1903,
     end: 1928,
     status: "active",
-    icon: greenIcon,
-    popup: "Genesee County Infirmary<br>See Walter Winchester Unit of Genesee Memorial Hospital"
+    popup: "See Walter Winchester Unit of Genesee Memorial Hospital"
   },
   {
     name: "Genesee County Infirmary",
@@ -72,8 +79,7 @@ const facilities = [
     start: 1928,
     end: 9999,
     status: "moved",
-    icon: yellowIcon,
-    popup: "Genesee County Infirmary<br>See Walter Winchester Unit of Genesee Memorial Hospital"
+    popup: "See Walter Winchester Unit of Genesee Memorial Hospital"
   },
 // Handle the new location.
   {
@@ -83,8 +89,7 @@ const facilities = [
     start: 1928,
     end: 1932,
     status: "active",
-    icon: greenIcon,
-    popup: "Genesee County Infirmary<br>See Walter Winchester Unit of Genesee Memorial Hospital"
+    popup: "See Walter Winchester Unit of Genesee Memorial Hospital"
   },
   {
     name: "Genesee County Hospital and Infirmary",
@@ -93,8 +98,7 @@ const facilities = [
     start: 1932,
     end: 1955,
     status: "active",
-    icon: greenIcon,
-    popup: "Genesee County Hospital and Infirmary<br>See Walter Winchester Unit of Genesee Memorial Hospital"
+    popup: "See Walter Winchester Unit of Genesee Memorial Hospital"
   },
   {
     name: "Genesee County Hospital Facility",
@@ -103,8 +107,7 @@ const facilities = [
     start: 1955,
     end: 1961,
     status: "active",
-    icon: greenIcon,
-    popup: "Genesee County Hospital Facility<br>See Walter Winchester Unit of Genesee Memorial Hospital"
+    popup: "See Walter Winchester Unit of Genesee Memorial Hospital"
   },
   {
     name: "Walter Winchester Hospital",
@@ -113,8 +116,7 @@ const facilities = [
     start: 1961,
     end: 1969,
     status: "active",
-    icon: greenIcon,
-    popup: "Walter Winchester Hospital<br>See Walter Winchester Unit of Genesee Memorial Hospital"
+    popup: "See Walter Winchester Unit of Genesee Memorial Hospital"
   },
   {
     name: "Walter Winchester Unit of Genesee Memorial Hospital",
@@ -123,8 +125,7 @@ const facilities = [
     start: 1969,
     end: 1970,
     status: "active",
-    icon: greenIcon,
-    popup: "Walter Winchester Unit of Genesee Memorial Hospital<br>See Walter Winchester Unit of Genesee Memorial Hospital"
+    popup: "See Walter Winchester Unit of Genesee Memorial Hospital"
   },
   {
     name: "Walter Winchester Unit of Genesee Memorial Hospital",
@@ -133,8 +134,7 @@ const facilities = [
     start: 1970,
     end: 9999,
     status: "closed",
-    icon: redIcon,
-    popup: "Walter Winchester Unit of Genesee Memorial Hospital<br>See Walter Winchester Unit of Genesee Memorial Hospital"
+    popup: "See Walter Winchester Unit of Genesee Memorial Hospital"
   },
 
   //
@@ -148,8 +148,7 @@ const facilities = [
     start: 1854,
     end: 1856,
     status: "active",
-    icon: greenIcon,
-    popup: "Michigan Asylum for Educating the Deaf and Dumb and Blind<br>See Michigan School for the Deaf"
+    popup: "See Michigan School for the Deaf"
   },
   {
     name: "Michigan Asylum for Educating the Deaf and Dumb and Blind",
@@ -158,8 +157,7 @@ const facilities = [
     start: 1856,
     end: 9999,
     status: "closed",
-    icon: redIcon,
-    popup: "Michigan Asylum for Educating the Deaf and Dumb and Blind<br>See Michigan School for the Deaf"
+    popup: "See Michigan School for the Deaf"
   },
   // Handle the new location.
   {
@@ -169,8 +167,7 @@ const facilities = [
     start: 1856,
     end: 1867,
     status: "active",
-    icon: greenIcon,
-    popup: "Michigan Asylum for Educating the Deaf and Dumb and Blind<br>See Michigan School for the Deaf"
+    popup: "See Michigan School for the Deaf"
   },
   {
     name: "Michigan Institution for Educating the Deaf and Dumb and Blind",
@@ -179,8 +176,7 @@ const facilities = [
     start: 1867,
     end: 1880,
     status: "active",
-    icon: greenIcon,
-    popup: "Michigan Institution for Educating the Deaf and Dumb and Blind<br>See Michigan School for the Deaf"
+    popup: "See Michigan School for the Deaf"
   },
   {
     name: "Michigan Institution for Educating the Deaf and Dumb",
@@ -189,8 +185,7 @@ const facilities = [
     start: 1880,
     end: 1887,
     status: "active",
-    icon: greenIcon,
-    popup: "Michigan Institution for Educating the Deaf and Dumb<br>See Michigan School for the Deaf"
+    popup: "See Michigan School for the Deaf"
   },
   {
     name: "Michigan School for the Deaf",
@@ -199,8 +194,7 @@ const facilities = [
     start: 1887,
     end: 1945,
     status: "active",
-    icon: greenIcon,
-    popup: "Michigan School for the Deaf<br>See Michigan School for the Deaf"
+    popup: "See Michigan School for the Deaf"
   },
   {
     name: "Michigan School for the Deaf",
@@ -209,8 +203,7 @@ const facilities = [
     start: 1945,
     end: 9999,
     status: "closed",
-    icon: redIcon,
-    popup: "Michigan School for the Deaf<br>See Michigan School for the Deaf<br>NOTE: This did not necessarily close, but stopped acting as a medical facility."
+    popup: "See Michigan School for the Deaf<br>NOTE: This did not necessarily close, but stopped acting as a medical facility."
   },
 
   // Axford Hospital
@@ -221,7 +214,6 @@ const facilities = [
     start: 1862,
     end: 9999,
     status: "proposed",
-    icon: purpleIcon,
     popup: "See Axford Hospital"
   },
 
@@ -233,7 +225,6 @@ const facilities = [
     start: 1877,
     end: 1878,
     status: "active",
-    icon: greenIcon,
     popup: "See Smallpox Pest House"
   },
   {
@@ -243,7 +234,6 @@ const facilities = [
     start: 1878,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See Smallpox Pest House"
   },
   //
@@ -258,7 +248,6 @@ const facilities = [
     start: 1881,
     end: 1883,
     status: "active",
-    icon: greenIcon,
     popup: "See Flint Sanitarium"
   },
   {
@@ -268,7 +257,6 @@ const facilities = [
     start: 1883,
     end: 9999,
     status: "moved",
-    icon: yellowIcon,
     popup: "See Flint Sanitarium"
   },
   // New location
@@ -279,7 +267,6 @@ const facilities = [
     start: 1882,
     end: 1888,
     status: "active",
-    icon: greenIcon,
     popup: "See Flint Sanitarium"
   },
   {
@@ -289,7 +276,6 @@ const facilities = [
     start: 1888,
     end: 1894,
     status: "closed",
-    icon: redIcon,
     popup: "See Flint Sanitarium"
   },
 
@@ -301,7 +287,6 @@ const facilities = [
     start: 1891,
     end: 1920,
     status: "active",
-    icon: greenIcon,
     popup: "See Oak Grove Sanitarium"
   },
   {
@@ -311,7 +296,6 @@ const facilities = [
     start: 1920,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See Oak Grove Sanitarium"
   },
 
@@ -323,7 +307,6 @@ const facilities = [
     start: 1894,
     end: 1901,
     status: "active",
-    icon: greenIcon,
     popup: "See Flint Sanitarium<br>For previous uses of the facility, see Flint Sanitarium"
   },
 
@@ -335,8 +318,7 @@ const facilities = [
     start: 1898,
     end: 1900,
     status: "active",
-    icon: greenIcon,
-    popup: "Cook's Hospital / Cooke's Hospital"
+    popup: "See Cook's Hospital / Cooke's Hospital"
   },
   {
     name: "Cook's Hospital / Cooke's Hospital",
@@ -345,7 +327,6 @@ const facilities = [
     start: 1900,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See Cook's Hospital / Cooke's Hospital"
   },
 
@@ -357,7 +338,6 @@ const facilities = [
     start: 1900,
     end: 1901,
     status: "active",
-    icon: greenIcon,
     popup: "See Flint City Hospital"
   },
   {
@@ -367,7 +347,6 @@ const facilities = [
     start: 1901,
     end: 9999,
     status: "moved",
-    icon: yellowIcon,
     popup: "See Flint City Hospital"
   },
   {
@@ -377,7 +356,6 @@ const facilities = [
     start: 1901,
     end: 1907,
     status: "active",
-    icon: greenIcon,
     popup: "See Flint City Hospital<>For previous uses of the facility, see Allen Sanitarium<br>For previous uses of the facility, see Flint Sanitarium"
   },
   {
@@ -387,7 +365,6 @@ const facilities = [
     start: 1907,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See Flint City Hospital<>For previous uses of the facility, see Allen Sanitarium<br>For previous uses of the facility, see Flint Sanitarium"
   },
 
@@ -399,7 +376,6 @@ const facilities = [
     start: 1901,
     end: 1902,
     status: "active",
-    icon: greenIcon,
     popup: "See Contagious Disease Hospital"
   },
   {
@@ -409,7 +385,6 @@ const facilities = [
     start: 1902,
     end: 9999,
     status: "moved",
-    icon: yellowIcon,
     popup: "See Contagious Disease Hospital"
   },
   {
@@ -419,7 +394,6 @@ const facilities = [
     start: 1901,
     end: 1917,
     status: "active",
-    icon: greenIcon,
     popup: "See Contagious Disease Hospital"
   },
   {
@@ -429,7 +403,6 @@ const facilities = [
     start: 1917,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See Contagious Disease Hospital"
   },
 
@@ -440,7 +413,6 @@ const facilities = [
     start: 1901,
     end: 1902,
     status: "active",
-    icon: greenIcon,
     popup: "See Detention Hospital"
   },
   {
@@ -450,7 +422,6 @@ const facilities = [
     start: 1902,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See Detention Hospital"
   },
 
@@ -461,7 +432,6 @@ const facilities = [
     start: 1904,
     end: 1923,
     status: "active",
-    icon: greenIcon,
     popup: "See American Legion Billet"
   },
   {
@@ -471,7 +441,6 @@ const facilities = [
     start: 1923,
     end: 1924,
     status: "closed",
-    icon: redIcon,
     popup: "See American Legion Billet"
   },
   {
@@ -481,7 +450,6 @@ const facilities = [
     start: 1924,
     end: 1977,
     status: "active",
-    icon: greenIcon,
     popup: "See American Legion Billet"
   },
   {
@@ -491,7 +459,6 @@ const facilities = [
     start: 1977,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See American Legion Billet"
   },
 
@@ -502,7 +469,6 @@ const facilities = [
     start: 1908,
     end: 9999,
     status: "active",
-    icon: greenIcon,
     popup: "See Hurley Medical Center"
   },
 
@@ -513,7 +479,6 @@ const facilities = [
     start: 1910,
     end: 1912,
     status: "active",
-    icon: greenIcon,
     popup: "See Oak Glen Maternity Home"
   },
   {
@@ -523,7 +488,6 @@ const facilities = [
     start: 1912,
     end: 1917,
     status: "active",
-    icon: greenIcon,
     popup: "See Oak Glen Maternity Home"
   },
   {
@@ -533,7 +497,6 @@ const facilities = [
     start: 1917,
     end: 1920,
     status: "active",
-    icon: greenIcon,
     popup: "See Oak Glen Maternity Home"
   },
   {
@@ -543,7 +506,6 @@ const facilities = [
     start: 1920,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See Oak Glen Maternity Home"
   },
 
@@ -554,7 +516,6 @@ const facilities = [
     start: 1915,
     end: 1919,
     status: "active",
-    icon: greenIcon,
     popup: "See Lawrence Hospital / Lawrence Chautauqua Hospital"
   },
   {
@@ -564,7 +525,6 @@ const facilities = [
     start: 1919,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See Lawrence Hospital / Lawrence Chautauqua Hospital"
   },
 
@@ -575,7 +535,6 @@ const facilities = [
     start: 1916,
     end: 1919,
     status: "active",
-    icon: greenIcon,
     popup: "See General Motors Emergency Hospital"
   },
   {
@@ -585,7 +544,6 @@ const facilities = [
     start: 1919,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See General Motors Emergency Hospital"
   },
 
@@ -596,7 +554,6 @@ const facilities = [
     start: 1916,
     end: 1917,
     status: "active",
-    icon: greenIcon,
     popup: "See Nemo Hospital"
   },
   {
@@ -606,7 +563,6 @@ const facilities = [
     start: 1917,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See Nemo Hospital"
   },
 
@@ -617,7 +573,6 @@ const facilities = [
     start: 1916,
     end: 1962,
     status: "active",
-    icon: greenIcon,
     popup: "See Genesys Wheelock Memorial Hospital"
   },
   {
@@ -627,7 +582,6 @@ const facilities = [
     start: 1962,
     end: 1964,
     status: "closed",
-    icon: redIcon,
     popup: "See Genesys Wheelock Memorial Hospital"
   },
   {
@@ -637,7 +591,6 @@ const facilities = [
     start: 1964,
     end: 9999,
     status: "moved",
-    icon: yellowIcon,
     popup: "See Genesys Wheelock Memorial Hospital"
   },
   {
@@ -647,7 +600,6 @@ const facilities = [
     start: 1964,
     end: 1992,
     status: "active",
-    icon: greenIcon,
     popup: "See Genesys Wheelock Memorial Hospital"
   },
   {
@@ -657,7 +609,6 @@ const facilities = [
     start: 1992,
     end: 1998,
     status: "active",
-    icon: greenIcon,
     popup: "See Genesys Wheelock Memorial Hospital"
   },
   {
@@ -667,7 +618,366 @@ const facilities = [
     start: 1998,
     end: 9999,
     status: "closed",
-    icon: redIcon,
     popup: "See Genesys Wheelock Memorial Hospital"
+  },
+
+  {
+    name: "Bush Building Emergency Hospital",
+    lat: 43.01654149873238,
+    lng: -83.69270463236688,
+    start: 1917,
+    end: 1926,
+    status: "active",
+    popup: "See Bush Building Emergency Hospital"
+  },
+  {
+    name: "Bush Building Emergency Hospital",
+    lat: 43.01654149873238,
+    lng: -83.69270463236688,
+    start: 1926,
+    end: 9999,
+    status: "closed",
+    popup: "See Bush Building Emergency Hospital"
+  },
+
+  // McLaren Flint's block
+
+  {
+    name: "Elliot-Girard Hospital",
+    lat: 43.01368620020097,
+    lng: -83.68700932603501,
+    start: 1917,
+    end: 1919,
+    status: "active",
+    popup: "See McLaren Flint"
+  },
+  {
+    name: "The Women's Hospital",
+    lat: 43.01368620020097,
+    lng: -83.68700932603501,
+    start: 1919,
+    end: 1923,
+    status: "active",
+    popup: "See McLaren Flint"
+  },
+  {
+    name: "The Women's Hospital",
+    lat: 43.01368620020097,
+    lng: -83.68700932603501,
+    start: 1923,
+    end: 9999,
+    status: "moved",
+    popup: "See McLaren Flint"
+  },
+  {
+    name: "The Women's Hospital",
+    lat: 43.00899233516945,
+    lng: -83.66975688899078,
+    start: 1923,
+    end: 1951,
+    status: "active",
+    popup: "See McLaren Flint"
+  },
+  {
+    name: "The Women's Hospital",
+    lat: 43.00899233516945,
+    lng: -83.66975688899078,
+    start: 1951,
+    end: 9999,
+    status: "moved",
+    popup: "See McLaren Flint"
+  },
+  {
+    name: "McLaren General Hospital",
+    lat: 43.013957552506966,
+    lng: -83.732711971603,
+    start: 1951,
+    end: 1990,
+    status: "active",
+    popup: "See McLaren Flint"
+  },
+  {
+    name: "McLaren Regional Medical Center",
+    lat: 43.013957552506966,
+    lng: -83.732711971603,
+    start: 1990,
+    end: 2012,
+    status: "active",
+    popup: "See McLaren Flint"
+  },
+  {
+    name: "McLaren Flint",
+    lat: 43.013957552506966,
+    lng: -83.732711971603,
+    start: 2012,
+    end: 9999,
+    status: "active",
+    popup: "See McLaren Flint"
+  },
+
+// Chevrolet Hospital
+  {
+    name: "Chevrolet Hospital",
+    lat: 43.01229422627466,
+    lng: -83.7019903215259,
+    start: 1918,
+    end: 1968,
+    status: "active",
+    popup: "See Chevrolet Hospital"
+  },
+  {
+    name: "Chevrolet Hospital",
+    lat: 43.01229422627466,
+    lng: -83.7019903215259,
+    start: 1968,
+    end: 9999,
+    status: "closed",
+    popup: "See Chevrolet Hospital"
+  },
+
+// St. Pauls block
+  {
+    name: "St. Paul’s Church Emergency Hospital",
+    lat: 43.01411898668765,
+    lng: -83.6885330898766,
+    start: 1918,
+    end: 1919,
+    status: "active",
+    popup: "See St. Paul’s Church Emergency Hospital"
+  },
+  {
+    name: "St. Paul’s Church Emergency Hospital",
+    lat: 43.01411898668765,
+    lng: -83.6885330898766,
+    start: 1919,
+    end: 9999,
+    status: "closed",
+    popup: "See St. Paul’s Church Emergency Hospital"
+  },
+
+  // Glenwood Hospital block
+  {
+    name: "Glenwood Hospital",
+    lat: 43.00821087102604,
+    lng: -83.70710076385477,
+    start: 1918,
+    end: 1919,
+    status: "active",
+    popup: "See Glenwood Hospital"
+  },
+  {
+    name: "Glenwood Hospital",
+    lat: 43.00821087102604,
+    lng: -83.70710076385477,
+    start: 1919,
+    end: 9999,
+    status: "closed",
+    popup: "See Glenwood Hospital"
+  },
+
+  // Emergency Hospital block
+  {
+    name: "Emergency Hospital",
+    lat: 43.00993244027801,
+    lng: -83.6830507989573,
+    start: 1920,
+    end: 1921,
+    status: "active",
+    popup: "See Emergency Hospital"
+  },
+  {
+    name: "Emergency Hospital",
+    lat: 43.00993244027801,
+    lng: -83.6830507989573,
+    start: 1921,
+    end: 9999,
+    status: "closed",
+    popup: "See Emergency Hospital"
+  },
+
+  // Hospital at City Mission block
+  {
+    name: "Hospital at City Mission",
+    lat: 43.013664127622285,
+    lng: -83.68825028240553,
+    start: 1920,
+    end: 1921,
+    status: "active",
+    popup: "See Hospital at City Mission"
+  },
+  {
+    name: "Hospital at City Mission",
+    lat: 43.013664127622285,
+    lng: -83.68825028240553,
+    start: 1921,
+    end: 9999,
+    status: "closed",
+    popup: "See Hospital at City Mission"
+  },
+
+  // St. Joseph section
+  {
+    name: "St. Joseph Hospital",
+    lat: 43.01019522866988,
+    lng: -83.69607486177802,
+    start: 1921,
+    end: 1936,
+    status: "active",
+    popup: "See Genesys East Flint Campus"
+  },
+  {
+    name: "St. Joseph Hospital",
+    lat: 43.01019522866988,
+    lng: -83.69607486177802,
+    start: 1936,
+    end: 9999,
+    status: "moved",
+    popup: "See Genesys East Flint Campus"
+  },
+  {
+    name: "St. Joseph Hospital",
+    lat: 43.02395562079966,
+    lng: -83.66746247369477,
+    start: 1936,
+    end: 1992,
+    status: "active",
+    popup: "See Genesys East Flint Campus"
+  },
+  {
+    name: "Genesys St. Joseph Hospital",
+    lat: 43.02395562079966,
+    lng: -83.66746247369477,
+    start: 1992,
+    end: 1998,
+    status: "active",
+    popup: "See Genesys East Flint Campus"
+  },
+  {
+    name: "Genesys East Flint Campus",
+    lat: 43.02395562079966,
+    lng: -83.66746247369477,
+    start: 1998,
+    end: 2002,
+    status: "active",
+    popup: "See Genesys East Flint Campus"
+  },
+  {
+    name: "Genesys East Flint Campus",
+    lat: 43.02395562079966,
+    lng: -83.66746247369477,
+    start: 2002,
+    end: 9999,
+    status: "moved",
+    popup: "See Genesys East Flint Campus"
+  },
+  {
+    name: "Genesys East Flint Campus",
+    lat: 43.031187445004285,
+    lng: -83.63467596326784,
+    start: 2002,
+    end: 2011,
+    status: "active",
+    popup: "See Genesys East Flint Campus"
+  },
+  {
+    name: "Genesys East Flint Campus",
+    lat: 43.031187445004285,
+    lng: -83.63467596326784,
+    start: 2011,
+    end: 9999,
+    status: "closed",
+    popup: "See Genesys East Flint Campus"
+  },
+
+  // TODO: Mt. Morris General
+
+  // Davison General Hospital
+  {
+    name: "Davison General Hospital",
+    lat: 43.02695168581914,
+    lng: -83.51835386742545,
+    start: 1924,
+    end: 1925,
+    status: "active",
+    popup: "See Davison General Hospital"
+  },
+  {
+    name: "Davison General Hospital",
+    lat: 43.02695168581914,
+    lng: -83.51835386742545,
+    start: 1925,
+    end: 1926,
+    status: "closed",
+    popup: "See Davison General Hospital"
+  },
+  {
+    name: "Davison General Hospital",
+    lat: 43.02695168581914,
+    lng: -83.51835386742545,
+    start: 1926,
+    end: 1928,
+    status: "active",
+    popup: "See Davison General Hospital"
+  },
+  {
+    name: "Davison General Hospital",
+    lat: 43.02695168581914,
+    lng: -83.51835386742545,
+    start: 1928,
+    end: 9999,
+    status: "closed",
+    popup: "See Davison General Hospital"
+  },
+
+  {
+    name: "Industrial Mutual Association Hospital",
+    lat: 43.020023262978604,
+    lng: -83.69311632411232,
+    start: 1924,
+    end: 9999,
+    status: "proposed",
+    popup: "See Industrial Mutual Association Hospital"
+  },
+
+  // TODO: Dr. Charter's mess.
+
+  // Kellogg Maternity Home
+  {
+    name: "Kellogg Maternity Home",
+    lat: 42.80082562987472,
+    lng: -83.70073132733864,
+    start: 1927,
+    end: 1928,
+    status: "active",
+    popup: "See Kellogg Maternity Home"
+  },
+  {
+    name: "Kellogg Maternity Home",
+    lat: 42.80082562987472,
+    lng: -83.70073132733864,
+    start: 1928,
+    end: 9999,
+    status: "closed",
+    popup: "See Kellogg Maternity Home"
+  },
+
+  // Metzger Maternity Home
+  {
+    name: "Metzger Maternity Home",
+    lat: 42.98836398982371,
+    lng: -83.6664254171693,
+    start: 1927,
+    end: 1931,
+    status: "active",
+    popup: "See Metzger Maternity Home"
+  },
+  {
+    name: "Metzger Maternity Home",
+    lat: 42.98836398982371,
+    lng: -83.6664254171693,
+    start: 1931,
+    end: 9999,
+    status: "closed",
+    popup: "See Metzger Maternity Home"
   },
 ];
