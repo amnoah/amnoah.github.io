@@ -462,6 +462,8 @@ const facilities = [
     popup: "See American Legion Billet"
   },
 
+  // TODO: Finish Hurley
+
   {
     name: "Hurley Medical Center",
     lat: 43.02151802282558,
@@ -830,7 +832,7 @@ const facilities = [
     lat: 43.01019522866988,
     lng: -83.69607486177802,
     start: 1936,
-    end: 9999,
+    end: 1949,
     status: "moved",
     popup: "See Genesys East Flint Campus"
   },
@@ -979,5 +981,480 @@ const facilities = [
     end: 9999,
     status: "closed",
     popup: "See Metzger Maternity Home"
+  },
+
+  {
+    name: "Flint Osteopathic Hospital",
+    lat: 43.02442933015761,
+    lng: -83.69828687737248,
+    start: 1934,
+    end: 1936,
+    status: "active",
+    popup: "See Genesys West Flint Campus"
+  },
+  {
+    name: "Still Osteopathic Hospital",
+    lat: 43.02442933015761,
+    lng: -83.69828687737248,
+    start: 1936,
+    end: 1941,
+    status: "active",
+    popup: "See Genesys West Flint Campus"
+  },
+  {
+    name: "Still Osteopathic Hospital",
+    lat: 43.02442933015761,
+    lng: -83.69828687737248,
+    start: 1941,
+    end: 9999,
+    status: "moved",
+    popup: "See Genesys West Flint Campus"
+  },
+  {
+    name: "Still Osteopathic Hospital",
+    lat: 43.02074200680166,
+    lng: -83.70006541205957,
+    start: 1941,
+    end: 1946,
+    status: "active",
+    popup: "See Genesys West Flint Campus"
+  },
+  {
+    name: "Flint Osteopathic Hospital",
+    lat: 43.02074200680166,
+    lng: -83.70006541205957,
+    start: 1946,
+    end: 1960,
+    status: "active",
+    popup: "See Genesys West Flint Campus"
+  },
+  {
+    name: "Flint Osteopathic Hospital",
+    lat: 43.02074200680166,
+    lng: -83.70006541205957,
+    start: 1960,
+    end: 9999,
+    status: "moved",
+    popup: "See Genesys West Flint Campus"
+  },
+  {
+    name: "Flint Osteopathic Hospital",
+    lat: 43.013151360076584,
+    lng: -83.73630597583534,
+    start: 1960,
+    end: 1992,
+    status: "active",
+    popup: "See Genesys West Flint Campus"
+  },
+  {
+    name: "Genesys Flint Osteopathic Hospital",
+    lat: 43.013151360076584,
+    lng: -83.73630597583534,
+    start: 1992,
+    end: 1998,
+    status: "active",
+    popup: "See Genesys West Flint Campus"
+  },
+  {
+    name: "Genesys West Flint Campus",
+    lat: 43.013151360076584,
+    lng: -83.73630597583534,
+    start: 1998,
+    end: 2011,
+    status: "active",
+    popup: "See Genesys West Flint Campus"
+  },
+  {
+    name: "Genesys West Flint Campus",
+    lat: 43.013151360076584,
+    lng: -83.73630597583534,
+    start: 2011,
+    end: 9999,
+    status: "closed",
+    popup: "See Genesys West Flint Campus"
+  },
+
+  {
+    name: "Community Hospital and Maternity Home",
+    lat: 43.01394037158871,
+    lng: -83.68768332436706,
+    start: 1935,
+    end: 1937,
+    status: "active",
+    popup: "See Community Hospital and Maternity Home"
+  },
+  {
+    name: "Community Hospital and Maternity Home",
+    lat: 43.01394037158871,
+    lng: -83.68768332436706,
+    start: 1937,
+    end: 9999,
+    status: "closed",
+    popup: "See Community Hospital and Maternity Home"
+  },
+
+  {
+    name: "Flint General Hospital",
+    lat: 43.02529321797266,
+    lng: -83.6932321799237,
+    start: 1936,
+    end: 1937,
+    status: "active",
+    popup: "See Family Hospital"
+  },
+  {
+    name: "Flint General Hospital",
+    lat: 43.02529321797266,
+    lng: -83.6932321799237,
+    start: 1937,
+    end: 9999,
+    status: "moved",
+    popup: "See Family Hospital"
+  },
+  {
+    name: "Flint General Hospital",
+    lat: 43.03599027876849,
+    lng: -83.69090838378025,
+    start: 1937,
+    end: 1982,
+    status: "active",
+    popup: "See Family Hospital"
+  },
+  {
+    name: "Family Hospital",
+    lat: 43.03599027876849,
+    lng: -83.69090838378025,
+    start: 1982,
+    end: 1984,
+    status: "active",
+    popup: "See Family Hospital"
+  },
+  {
+    name: "Family Hospital",
+    lat: 43.03599027876849,
+    lng: -83.69090838378025,
+    start: 1984,
+    end: 9999,
+    status: "closed",
+    popup: "See Family Hospital"
+  },
+
+  {
+    name: "Fenton Memorial Hospital",
+    lat: 42.79862371942018,
+    lng: -83.69087856318122,
+    start: 1943,
+    end: 9999,
+    status: "proposed",
+    popup: "See Fenton Memorial Hospital"
+  },
+
+  {
+    name: "Elizabeth Hynds Convalescent Hospital",
+    lat: 43.01019522866988,
+    lng: -83.69607486177802,
+    start: 1949,
+    end: 1955,
+    status: "active",
+    popup: "See Elizabeth Hynds Convalescent Hospital"
+  },
+  {
+    name: "Elizabeth Hynds Convalescent Hospital",
+    lat: 43.01019522866988,
+    lng: -83.69607486177802,
+    start: 1955,
+    end: 9999,
+    status: "closed",
+    popup: "See Elizabeth Hynds Convalescent Hospital"
+  },
+
+  {
+    name: "Industrial Medical Center",
+    lat: 43.00715830832458,
+    lng: -83.69328872803527,
+    start: 1965,
+    end: 1988,
+    status: "active",
+    popup: "See Industrial Medical Center"
+  },
+  {
+    name: "Industrial Medical Center",
+    lat: 43.00715830832458,
+    lng: -83.69328872803527,
+    start: 1988,
+    end: 9999,
+    status: "closed",
+    popup: "See Industrial Medical Center"
+  },
+
+  {
+    name: "Mediclinic",
+    lat: 43.0216725570331,
+    lng: -83.70119675212963,
+    start: 1970,
+    end: 1973,
+    status: "active",
+    popup: "See MultiCo"
+  },
+  {
+    name: "Mediclinic",
+    lat: 43.0216725570331,
+    lng: -83.70119675212963,
+    start: 1973,
+    end: 9999,
+    status: "closed",
+    popup: "See MultiCo"
+  },
+  {
+    name: "Pediatric Mediclinic",
+    lat: 43.00706762388249,
+    lng: -83.70324313939153,
+    start: 1971,
+    end: 1973,
+    status: "active",
+    popup: "See MultiCo"
+  },
+  {
+    name: "Pediatric Mediclinic",
+    lat: 43.00706762388249,
+    lng: -83.70324313939153,
+    start: 1973,
+    end: 9999,
+    status: "closed",
+    popup: "See MultiCo"
+  },
+  {
+    name: "MultiCo Grand Blanc Psychiatric Hospital",
+    lat: 42.93018022725338,
+    lng: -83.5956306641853,
+    start: 1971,
+    end: 9999,
+    status: "proposed",
+    popup: "See MultiCo"
+  },
+  {
+    name: "MultiCo Fenton General Hospital",
+    lat: 42.79880817552851,
+    lng: -83.72152231740606,
+    start: 1971,
+    end: 9999,
+    status: "proposed",
+    popup: "See MultiCo"
+  },
+  {
+    name: "MultiCo Flint General Hospital",
+    lat: 43.02134943317118,
+    lng: -83.70093476072279,
+    start: 1971,
+    end: 9999,
+    status: "proposed",
+    popup: "See MultiCo"
+  },
+
+  {
+    name: "Genesee County Community Mental Health Services",
+    lat: 43.02134943317118,
+    lng: -83.70093476072279,
+    start: 1972,
+    end: 1977,
+    status: "active",
+    popup: "See Genesee County Community Mental Health Services"
+  },
+  {
+    name: "Genesee County Community Mental Health Services",
+    lat: 43.02134943317118,
+    lng: -83.70093476072279,
+    start: 1977,
+    end: 9999,
+    status: "closed",
+    popup: "See Genesee County Community Mental Health Services<br>For previous uses of the facility, see MultiCo"
+  },
+
+  {
+    name: "Riverfront Medical Center",
+    lat: 43.01310312599162,
+    lng: -83.68449586506381,
+    start: 1982,
+    end: 2002,
+    status: "active",
+    popup: "See Riverfront Medical Center"
+  },
+  {
+    name: "Riverfront Medical Center",
+    lat: 43.01310312599162,
+    lng: -83.68449586506381,
+    start: 2002,
+    end: 9999,
+    status: "closed",
+    popup: "See Riverfront Medical Center"
+  },
+
+  {
+    name: "Insight Inc Alcoholism Recovery Facility",
+    lat: 43.016918278020626,
+    lng: -83.56642502832605,
+    start: 1978,
+    end: 9999,
+    status: "proposed",
+    popup: "See Insight Inc"
+  },
+  {
+    name: "Insight Inc Addiction Recovery Facility",
+    lat: 42.8746780114661,
+    lng: -83.69591923283107,
+    start: 1980,
+    end: 9999,
+    status: "proposed",
+    popup: "See Insight Inc"
+  },
+  /* TODO: Find answer
+  {
+    name: "Hurley-Insight Inc Addiction Recovery Facility",
+    lat: 42.8746780114661,
+    lng: -83.69591923283107,
+    start: 1980,
+    end: 1990,
+    status: "proposed",
+    popup: "See Insight Inc<br>For previous uses of the facility, see Genesee County Community Mental Health Services<br>For previous uses of the facility, see MultiCo"
+  },
+  */
+  {
+    name: "Insight at Sherwood Forest",
+    lat: 43.067280336998245,
+    lng: -83.50694963271731,
+    start: 1987,
+    end: 9999,
+    status: "proposed",
+    popup: "See Insight Inc"
+  },
+
+  {
+    name: "Ambulatory Surgery Center",
+    lat: 43.0142131585586,
+    lng: -83.68048493507744,
+    start: 1984,
+    end: 9999,
+    status: "proposed",
+    popup: "See Ambulatory Surgery Center"
+  },
+
+  {
+    name: "Flint Psychiatric Hospital",
+    lat: 43.00053441776288,
+    lng: -83.7738192066805,
+    start: 1985,
+    end: 9999,
+    status: "proposed",
+    popup: "See Flint Psychiatric Hospital"
+  },
+
+  // TODO: East michigan eye center
+
+  {
+    name: "Murray Cosmetic Surgery Center",
+    lat: 42.90234670826965,
+    lng: -83.60314947712108,
+    start: 1991,
+    end: 1999,
+    status: "active",
+    popup: "See Murray Cosmetic Surgery Center"
+  },
+  {
+    name: "Murray Cosmetic Surgery Center",
+    lat: 42.90234670826965,
+    lng: -83.60314947712108,
+    start: 1999,
+    end: 9999,
+    status: "closed",
+    popup: "See Murray Cosmetic Surgery Center"
+  },
+
+  // TODO: Finish Genesys
+
+  {
+    name: "Henry Ford Genesys Hospital",
+    lat: 42.8921667015529,
+    lng: -83.64259809499168,
+    start: 1997,
+    end: 9999,
+    status: "active",
+    popup: "See Henry Ford Genesys Hospital"
+  },
+
+  {
+    name: "The Surgery Center",
+    lat: 42.97525917465228,
+    lng: -83.77919883698998,
+    start: 1998,
+    end: 9999,
+    status: "active",
+    popup: "See The Surgery Center"
+  },
+
+  {
+    name: "Michigan Vision Institute",
+    lat: 42.98698893464288,
+    lng: -83.76306245281971,
+    start: 2005,
+    end: 2013,
+    status: "active",
+    popup: "See Surgery Center at Gateway"
+  },
+  {
+    name: "Michigan Vision Institute",
+    lat: 42.98698893464288,
+    lng: -83.76306245281971,
+    start: 2013,
+    end: 9999,
+    status: "moved",
+    popup: "See Surgery Center at Gateway"
+  },
+  {
+    name: "Michigan Vision Institute",
+    lat: 42.94749372603833,
+    lng: -83.72174929239526,
+    start: 2013,
+    end: 2023,
+    status: "active",
+    popup: "See Surgery Center at Gateway"
+  },
+  {
+    name: "Surgery Center at Gateway",
+    lat: 42.94749372603833,
+    lng: -83.72174929239526,
+    start: 2023,
+    end: 9999,
+    status: "active",
+    popup: "See Surgery Center at Gateway"
+  },
+
+  {
+    name: "Crowne Point Endoscopy & Surgery Center",
+    lat: 42.93715257911961,
+    lng: -83.72448349567986,
+    start: 2007,
+    end: 9999,
+    status: "active",
+    popup: "See Crowne Point Endoscopy & Surgery Center"
+  },
+
+  {
+    name: "Insight Institute of Neurosurgery and Neuroscience",
+    lat: 42.9828799574848,
+    lng: -83.67628688791376,
+    start: 2008,
+    end: 9999,
+    status: "active",
+    popup: "See Insight Institute of Neurosurgery and Neuroscience"
+  },
+
+  {
+    name: "McLaren Fenton",
+    lat: 42.79045448326055,
+    lng: -83.72328620970097,
+    start: 2020,
+    end: 9999,
+    status: "active",
+    popup: "See McLaren Fenton"
   },
 ];
