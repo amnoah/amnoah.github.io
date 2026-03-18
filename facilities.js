@@ -206,6 +206,25 @@ const facilities = [
     popup: "See Michigan School for the Deaf<br>NOTE: This did not necessarily close, but stopped acting as a medical facility."
   },
 
+  {
+    name: "Civil War Hospital",
+    lat: 43.01019522866988,
+    lng: -83.69607486177802,
+    start: 1861,
+    end: 1864,
+    status: "active",
+    popup: "See Civil War Hospital"
+  },
+  {
+    name: "Civil War Hospital",
+    lat: 43.01019522866988,
+    lng: -83.69607486177802,
+    start: 1864,
+    end: 1921,
+    status: "closed",
+    popup: "See Civil War Hospital"
+  },
+
   // Axford Hospital
   {
     name: "Axford Hospital",
@@ -825,7 +844,7 @@ const facilities = [
     start: 1921,
     end: 1936,
     status: "active",
-    popup: "See Genesys East Flint Campus"
+    popup: "See Genesys East Flint Campus<br>For previous uses of the facility, see Civil War Hospital"
   },
   {
     name: "St. Joseph Hospital",
@@ -834,7 +853,7 @@ const facilities = [
     start: 1936,
     end: 1949,
     status: "moved",
-    popup: "See Genesys East Flint Campus"
+    popup: "See Genesys East Flint Campus<br>For previous uses of the facility, see Civil War Hospital"
   },
   {
     name: "St. Joseph Hospital",
@@ -1156,7 +1175,7 @@ const facilities = [
     start: 1949,
     end: 1955,
     status: "active",
-    popup: "See Elizabeth Hynds Convalescent Hospital"
+    popup: "See Elizabeth Hynds Convalescent Hospital<br>For previous uses of the facility, see Genesys East Flint Campus<br>For previous uses of the facility, see Civil War Hospital"
   },
   {
     name: "Elizabeth Hynds Convalescent Hospital",
@@ -1165,7 +1184,7 @@ const facilities = [
     start: 1955,
     end: 9999,
     status: "closed",
-    popup: "See Elizabeth Hynds Convalescent Hospital"
+    popup: "See Elizabeth Hynds Convalescent Hospital<br>For previous uses of the facility, see Genesys East Flint Campus<br>For previous uses of the facility, see Civil War Hospital"
   },
 
   {
