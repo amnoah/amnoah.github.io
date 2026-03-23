@@ -1476,4 +1476,41 @@ const facilities = [
     status: "active",
     popup: "See McLaren Fenton"
   },
+
+  {
+    name: "McLaren Regional Cancer Center",
+    lat: 43.014933736060314,
+    lng: -83.7357660478735,
+    start: 1989,
+    end: 2001,
+    status: "active",
+    popup: "See Karmanos Cancer Institute at McLaren Flint"
+  },
+  {
+    name: "Great Lakes Cancer Institute",
+    lat: 43.014933736060314,
+    lng: -83.7357660478735,
+    start: 2001,
+    end: 2012,
+    status: "active",
+    popup: "See Karmanos Cancer Institute at McLaren Flint"
+  },
+  {
+    name: "McLaren Cancer Institute",
+    lat: 43.014933736060314,
+    lng: -83.7357660478735,
+    start: 2012,
+    end: 2016,
+    status: "active",
+    popup: "See Karmanos Cancer Institute at McLaren Flint"
+  },
+  {
+    name: "Karmanos Cancer Institute at McLaren Flint",
+    lat: 43.014933736060314,
+    lng: -83.7357660478735,
+    start: 2012,
+    end: 9999,
+    status: "active",
+    popup: "See Karmanos Cancer Institute at McLaren Flint"
+  },
 ];
