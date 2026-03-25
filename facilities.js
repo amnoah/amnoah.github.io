@@ -1508,7 +1508,7 @@ const facilities = [
     name: "Karmanos Cancer Institute at McLaren Flint",
     lat: 43.014933736060314,
     lng: -83.7357660478735,
-    start: 2012,
+    start: 2016,
     end: 9999,
     status: "active",
     popup: "See Karmanos Cancer Institute at McLaren Flint"
