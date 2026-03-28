@@ -481,6 +481,16 @@ const facilities = [
     popup: "See American Legion Billet"
   },
 
+  {
+    name: "Fenton Sanitarium",
+    lat: 42.79148909936011,
+    lng: -83.71448318821233,
+    start: 1904,
+    end: 9999,
+    status: "proposed",
+    popup: "See Fenton Sanitarium"
+  },
+
   // TODO: Finish Hurley
 
   {
