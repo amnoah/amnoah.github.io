@@ -888,8 +888,8 @@ const facilities = [
     lng: -83.66746247369477,
     start: 2002,
     end: 9999,
-    status: "moved",
-    popup: "See Genesys East Flint Campus"
+    status: "active",
+    popup: "See Genesys-Hurley Cancer Institute<br>For previous uses of the facility, see Genesys East Flint Campus"
   },
   {
     name: "Genesys East Flint Campus",
