@@ -883,7 +883,7 @@ const facilities = [
     popup: "See Genesys East Flint Campus"
   },
   {
-    name: "Genesys East Flint Campus",
+    name: "Genesys-Hurley Cancer Institute",
     lat: 43.02395562079966,
     lng: -83.66746247369477,
     start: 2002,
