@@ -156,7 +156,7 @@ const facilities = [
     lng: -83.6865809746638,
     start: 1856,
     end: 9999,
-    status: "closed",
+    status: "moved",
     popup: "See Michigan School for the Deaf"
   },
   // Handle the new location.
