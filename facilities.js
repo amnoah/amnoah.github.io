@@ -920,6 +920,26 @@ const facilities = [
     popup: "See Genesys East Flint Campus"
   },
 
+  // West Court Maternity Hospital
+  {
+    name: "West Court Maternity Home",
+    lat: 43.007163575906574,
+    lng: -83.71423273783094,
+    start: 1921,
+    end: 1923,
+    status: "active",
+    popup: "See West Court Maternity Home"
+  },
+  {
+    name: "West Court Maternity Home",
+    lat: 43.007163575906574,
+    lng: -83.71423273783094,
+    start: 1923,
+    end: 9999,
+    status: "closed",
+    popup: "See West Court Maternity Home"
+  },
+
   // TODO: Mt. Morris General
 
   // Davison General Hospital
@@ -970,7 +990,173 @@ const facilities = [
     popup: "See Industrial Mutual Association Hospital"
   },
 
-  // TODO: Dr. Charter's mess.
+  // Dr. Charter's mess.
+
+  {
+    name: "Tonsil Clinic and Hospital",
+    lat: 43.064444201851366,
+    lng: -83.85514922805731,
+    start: 1925,
+    end: 1929,
+    status: "active",
+    popup: "NOTE: This was likely not the original location, but is the best bet we have.<br>See Tonsil Clinic and Hospital"
+  },
+  {
+    name: "Tonsil Clinic and Hospital",
+    lat: 43.064444201851366,
+    lng: -83.85514922805731,
+    start: 1929,
+    end: 1930,
+    status: "active",
+    popup: "See Westside Hospital"
+  },
+  {
+    name: "Tonsil and Maternity Hospital",
+    lat: 43.064444201851366,
+    lng: -83.85514922805731,
+    start: 1930,
+    end: 1931,
+    status: "active",
+    popup: "See Westside Hospital"
+  },
+  {
+    name: "Tonsil and Maternity Hospital",
+    lat: 43.064444201851366,
+    lng: -83.85514922805731,
+    start: 1931,
+    end: 9999,
+    status: "moved",
+    popup: "See Westside Hospital"
+  },
+  {
+    name: "Tonsil and Maternity Hospital",
+    lat: 43.01435614065631,
+    lng: -83.68604632992442,
+    start: 1931,
+    end: 1932,
+    status: "active",
+    popup: "See Westside Hospital"
+  },
+  {
+    name: "Dr. Charters' Maternity Hospital",
+    lat: 43.01435614065631,
+    lng: -83.68604632992442,
+    start: 1932,
+    end: 1933,
+    status: "active",
+    popup: "See Westside Hospital"
+  },
+  {
+    name: "Westside Hospital",
+    lat: 43.01435614065631,
+    lng: -83.68604632992442,
+    start: 1933,
+    end: 1934,
+    status: "active",
+    popup: "See Westside Hospital"
+  },
+  {
+    name: "Westside Hospital",
+    lat: 43.01435614065631,
+    lng: -83.68604632992442,
+    start: 1934,
+    end: 9999,
+    status: "moved",
+    popup: "See Westside Hospital"
+  },
+  {
+    name: "Westside Hospital",
+    lat: 43.02036029621902,
+    lng: -83.69918378130812,
+    start: 1934,
+    end: 1936,
+    status: "active",
+    popup: "See Westside Hospital"
+  },
+  {
+    name: "Westside Hospital",
+    lat: 43.02036029621902,
+    lng: -83.69918378130812,
+    start: 1936,
+    end: 9999,
+    status: "moved",
+    popup: "See Westside Hospital"
+  },
+  {
+    name: "Westside Hospital",
+    lat: 43.005377447806644,
+    lng: -83.71336416946595,
+    start: 1936,
+    end: 1942,
+    status: "active",
+    popup: "See Westside Hospital"
+  },
+  {
+    name: "Westside Hospital",
+    lat: 43.005377447806644,
+    lng: -83.71336416946595,
+    start: 1942,
+    end: 9999,
+    status: "closed",
+    popup: "See Westside Hospital"
+  },
+
+  // Vincent Maternity Hospital
+
+  {
+    name: "Vincent Maternity Hospital",
+    lat: 43.00430884692281,
+    lng: -83.71508433257793,
+    start: 1926,
+    end: 1927,
+    status: "active",
+    popup: "See Vincent Maternity Hospital"
+  },
+  {
+    name: "Vincent Maternity Hospital",
+    lat: 43.00430884692281,
+    lng: -83.71508433257793,
+    start: 1927,
+    end: 9999,
+    status: "moved",
+    popup: "See Vincent Maternity Hospital"
+  },
+  {
+    name: "Vincent Maternity Hospital",
+    lat: 43.00597463397634,
+    lng: -83.7141419952408,
+    start: 1927,
+    end: 1928,
+    status: "active",
+    popup: "See Vincent Maternity Hospital"
+  },
+  {
+    name: "Vincent Maternity Hospital",
+    lat: 43.00597463397634,
+    lng: -83.7141419952408,
+    start: 1928,
+    end: 9999,
+    status: "moved",
+    popup: "See Vincent Maternity Hospital"
+  },
+  {
+    name: "Vincent Maternity Hospital",
+    lat: 43.005518586151325,
+    lng: -83.71308716521095,
+    start: 1928,
+    end: 1929,
+    status: "active",
+    popup: "See Vincent Maternity Hospital"
+  },
+  {
+    name: "Vincent Maternity Hospital",
+    lat: 43.005518586151325,
+    lng: -83.71308716521095,
+    start: 1929,
+    end: 9999,
+    status: "closed",
+    popup: "See Vincent Maternity Hospital"
+  },
 
   // Kellogg Maternity Home
   {
@@ -1010,6 +1196,26 @@ const facilities = [
     end: 9999,
     status: "closed",
     popup: "See Metzger Maternity Home"
+  },
+
+  // County Insane Hospital
+  {
+    name: "County Insane Hospital",
+    lat: 42.997665922122266,
+    lng: -83.68063177292416,
+    start: 1929,
+    end: 1932,
+    status: "active",
+    popup: "See County Insane Hospital"
+  },
+  {
+    name: "County Insane Hospital",
+    lat: 42.997665922122266,
+    lng: -83.68063177292416,
+    start: 1932,
+    end: 9999,
+    status: "closed",
+    popup: "See County Insane Hospital"
   },
 
   {
