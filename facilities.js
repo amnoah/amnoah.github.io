@@ -1481,7 +1481,7 @@ const facilities = [
     lat: 43.02134943317118,
     lng: -83.70093476072279,
     start: 1971,
-    end: 9999,
+    end: 1972,
     status: "proposed",
     popup: "See MultiCo"
   },
