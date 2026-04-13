@@ -262,8 +262,8 @@ const facilities = [
   // Old location
   {
     name: "Flint Medical and Surgical Institute and Hospital",
-    lat: 43.01407730521347,
-    lng: -83.68920474378255,
+    lat: 43.02137421704793,
+    lng: -83.69357253812642,
     start: 1881,
     end: 1883,
     status: "active",
@@ -271,8 +271,8 @@ const facilities = [
   },
   {
     name: "Flint Medical and Surgical Institute and Hospital",
-    lat: 43.01407730521347,
-    lng: -83.68920474378255,
+    lat: 43.02137421704793,
+    lng: -83.69357253812642,
     start: 1883,
     end: 9999,
     status: "moved",
