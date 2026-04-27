@@ -1,14 +1,6 @@
-# leaflet-examples
-Examples of using leaflet.js to display OpenStreetMaps
+# Genesee County Healthcare Project
 
-## View Examples
-To browse the examples use the url:
-[https://jonnymccullagh.github.io/leaflet-examples/](https://jonnymccullagh.github.io/leaflet-examples/)
+The goal of this project is to make the information researched about Genesee County's medical past more accessible via
+different interactive designs. These systems are all used best alongside the content that we write.
 
-## Usage
-Clone or download a copy of this repository e.g.
-```
-git clone https://github.com/jonnymccullagh/leaflet-examples.git
-```
-Then open the `index.html` page in a web browser to browse through the examples.
-View the source in your web browser to see how the examples were created.
+This is still very early in development and is missing a lot of data.

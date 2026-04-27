@@ -1,0 +1,127 @@
+/* Size the slider to a maximum of 1200 pixels and 90% of the screen width. */
+.slidecontainer {
+  position: relative;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+/* This generally themes our sliders. */
+.slidecontainer input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 15px;
+
+  margin: 0;
+  background: none;
+
+  pointer-events: none;
+  opacity: 1.0;
+  transition: opacity 0.2s;
+}
+
+/* Make slider darker when hovered. */
+.slidecontainer:hover input[type=range] {
+  opacity: 1;
+}
+
+/* Color and size the slider bars. */
+#minYear::-webkit-slider-runnable-track,
+#maxYear::-webkit-slider-runnable-track {
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+}
+
+/* Hide max year slider bar. Otherwise it will cover min year bar. */
+#maxYear::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+/* Color our slider pointers. */
+.slidecontainer input[type=range]::-webkit-slider-thumb {
+  pointer-events: all;
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+
+  margin-top: -5px;
+}
+
+/* The container */
+.cbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox*/
+.cbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .showSideBar {
+  background-color: #0f9d58;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator. */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

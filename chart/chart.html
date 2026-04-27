@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Load general metadata into the site. -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+        <title>Genesee County Healthcare Chart</title>
+    </head>
+
+    <header>
+        <!-- Prepare the navigation bar. -->
+        <nav class="navbar-expand navbar-dark bg-dark" aria-label="header">
+            <div class="container-fluid">
+                <!-- Add the title. -->
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <strong>Genesee County Healthcare Project</strong>
+                </a>
+
+                <!-- Add all the page navigation layer. -->
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <!-- Add the link to the home page. -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+
+                    <!-- Add the link to the map. -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../map/map.html">Map</a>
+                    </li>
+
+                    <!-- Add the link to the chart. -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="chart.html">Chart</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Begin building main page content. -->
+        <section class="py-5 container">
+            <!-- Create a row to place the vis-timeline display titled "chart". -->
+            <div class="row py-lg-1">
+                <div id="chart"></div>
+            </div>
+
+            <!-- Create a row to place all of our controls into. -->
+            <div class="row py-lg-4">
+                <div class="col-lg-6 col-md-8">
+                    <div class="slidecontainer">
+
+                        <h3>Selected range: <span id="minYearDisplay"></span> - <span id="maxYearDisplay"></span></h3>
+
+                        <label for="minYear"></label>
+                        <input type="range" min="1840" max="2025" value="1840" id="minYear">
+                        <label for="maxYear"></label>
+                        <input type="range" min="1840" max="2025" value="2025" id="maxYear">
+                    </div>
+
+                    <!--
+                        Here we build a checkbox titled "activelyProposedCheckbox".
+                        It will have the text "Actively Proposed Facilities" displayed alongside it.
+                    -->
+                    <label class="cbox">
+                        Show Sidebar
+                        <input type="checkbox" id="showSideBar" checked="checked">
+                        <span class="checkmark showSideBar"></span>
+                    </label>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Sorting Method
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Alphabetical (A-Z)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Alphabetical (Z-A)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Chronological</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Inverse Chronological</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Longevity</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Inverse Longevity</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Disabled this for rn to see if this is more enjoyable.
+                    <div>
+                        After clicking into the chart, hold ctrl and scroll to zoom in/out.
+                    </div>-->
+
+                    <div>
+                        Please note, dates are rounded and data may not retain full accuracy.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="py-1 container">
+            <div class="row py-lg-4">
+                <h3>This page is powered by the following projects:</h3>
+                <div>
+                    <a href="https://popper.js.org">Popper.js</a> - <a href="https://github.com/vusion/popper.js/blob/master/LICENSE.md">(MIT License)</a>
+                </div>
+                <div>
+                    <a href="https://getbootstrap.com">Bootstrap</a> - <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE">(MIT License)</a>
+                </div>
+                <div>
+                    <a href="https://www.papaparse.com">Papa Parse</a> - <a href="https://github.com/mholt/PapaParse/blob/master/LICENSE">(MIT License)</a>
+                </div>
+                <div>
+                    <a href="https://github.com/visjs/vis-timeline">vis-timeline</a> - <a href="https://github.com/visjs/vis-timeline/blob/master/LICENSE.md">(MIT License)</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Import our scripts. -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5"></script>
+    <script src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <script src="chart.js"></script>
+
+    <!-- Load CSS styling. -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
+</html>

@@ -1,9 +1,11 @@
+/* Make slider scale with screen size. */
 .slidecontainer {
   width: 90vw;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Change slider appearance.*/
 .slider {
   -webkit-appearance: none;
   width: 100%;
@@ -15,6 +17,7 @@
   transition: opacity .2s;
 }
 
+/* Make slider change color when hovered.  */
 .slider:hover {
   opacity: 1;
 }
@@ -37,7 +40,7 @@
   cursor: pointer;
 }
 
-      /* The container */
+/* The container */
 .cbox {
   display: block;
   position: relative;
@@ -85,8 +88,11 @@
 .container input:checked ~ .moved {
   background-color: #ffea00;
 }
-.container input:checked ~ .proposed {
+.container input:checked ~ .activelyProposed {
   background-color: #9c27b0;
+}
+.container input:checked ~ .previouslyProposed {
+  background-color: #ff6dae;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -101,7 +107,7 @@
   display: block;
 }
 
-/* Style the checkmark/indicator */
+/* Style the checkmark/indicator. */
 .container .checkmark:after {
   left: 9px;
   top: 5px;
@@ -114,7 +120,9 @@
   transform: rotate(45deg);
 }
 
+/* Set basic characteristics of map. */
 #map {
+  position: absolute;
   height: 500px;
   width: 90vw;
   max-width: 1200px;

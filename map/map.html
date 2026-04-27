@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Load general metadata into the site. -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+        <title>Genesee County Healthcare Map</title>
+    </head>
+
+    <header>
+        <!-- Prepare the navigation bar. -->
+        <nav class="navbar-expand navbar-dark bg-dark" aria-label="header">
+            <div class="container-fluid">
+                <!-- Add the title. -->
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <strong>Genesee County Healthcare Project</strong>
+                </a>
+
+                <!-- Add all the page navigation layer. -->
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <!-- Add the link to the home page. -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+
+                    <!-- Add the link to the map. -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="map.html">Map</a>
+                    </li>
+
+                    <!-- Add the link to the chart. -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../chart/chart.html">Chart</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Begin building main page content. -->
+        <section class="py-5 container">
+            <!-- Create a row to place the Leaflet map in titled "map". -->
+            <div class="row py-lg-1">
+                <div id="map"></div>
+            </div>
+
+            <!-- Create a row to place all of our controls into. -->
+            <div class="row py-lg-4">
+                <div class="col-lg-6 col-md-8">
+
+                    <!-- Here we will display the year that is selected. The "selectedYear" element will be replaced by the year.-->
+                    <h3>Selected year: <span id="selectedYear"></span></h3>
+
+                    <!-- Build a slider that can be set between 1840 and 2025. Title it "yearSelector". -->
+                    <div class="slidecontainer">
+                        <label for="yearSelector"></label>
+                        <input type="range" min="1840" max="2025" value="1840" class="slider" id="yearSelector">
+                    </div>
+
+                    <!-- Used to add a little spacing. -->
+                    <h1> </h1>
+
+                    <!--
+                        Here we build a checkbox titled "activeCheckbox".
+                        It will have the text "Active Facilities" displayed alongside it.
+                    -->
+                    <label class="cbox">
+                        Active Facilities
+                        <input type="checkbox" id="activeCheckbox" checked="checked">
+                        <span class="checkmark active"></span>
+                    </label>
+
+                    <!--
+                        Here we build a checkbox titled "closedCheckbox".
+                        It will have the text "Inactive Facilities (Closed)" displayed alongside it.
+                    -->
+                    <label class="cbox">
+                        Inactive Facilities (Closed)
+                        <input type="checkbox" id="closedCheckbox" checked="checked">
+                        <span class="checkmark closed"></span>
+                    </label>
+
+                    <!--
+                        Here we build a checkbox titled "movedCheckbox".
+                        It will have the text "Inactive Facilities (Moved)" displayed alongside it.
+                    -->
+                    <label class="cbox">
+                        Inactive Facilities (Moved)
+                        <input type="checkbox" id="movedCheckbox" checked="checked">
+                        <span class="checkmark moved"></span>
+                    </label>
+
+                    <!--
+                        Here we build a checkbox titled "activelyProposedCheckbox".
+                        It will have the text "Actively Proposed Facilities" displayed alongside it.
+                    -->
+                    <label class="cbox">
+                        Actively Proposed Facilities
+                        <input type="checkbox" id="activelyProposedCheckbox" checked="checked">
+                        <span class="checkmark activelyProposed"></span>
+                    </label>
+
+                    <!--
+                        Here we build a checkbox titled "previouslyProposedCheckbox".
+                        It will have the text "Previously Proposed Facilities" displayed alongside it.
+                    -->
+                    <label class="cbox">
+                        Previously Proposed Facilities
+                        <input type="checkbox" id="previouslyProposedCheckbox" checked="checked">
+                        <span class="checkmark previouslyProposed"></span>
+                    </label>
+                </div>
+                <div>
+                    Please note, dates are rounded and data may not retain full accuracy.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="py-1 container">
+            <div class="row py-lg-4">
+                <h3>This page is powered by the following projects:</h3>
+                <div>
+                    <a href="https://popper.js.org">Popper.js</a> - <a href="https://github.com/vusion/popper.js/blob/master/LICENSE.md">(MIT License)</a>
+                </div>
+                <div>
+                    <a href="https://getbootstrap.com">Bootstrap</a> - <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE">(MIT License)</a>
+                </div>
+                <div>
+                    <a href="https://www.papaparse.com">Papa Parse</a> - <a href="https://github.com/mholt/PapaParse/blob/master/LICENSE">(MIT License)</a>
+                </div>
+                <div>
+                    <a href="https://leafletjs.com">Leaflet</a> - <a href="https://github.com/Leaflet/Leaflet/blob/main/LICENSE">(BSD 2 License)</a>
+                </div>
+                <div>
+                    <a href="https://github.com/Vectorial1024/leaflet-color-markers">Leaflet Color Markers</a> - <a href="https://github.com/Vectorial1024/leaflet-color-markers/blob/master/LICENSE">(BSD 2 License)</a>
+                </div>
+                <div>
+                    <a href="https://www.openstreetmap.org">OpenStreetMap</a> - <a href="https://www.openstreetmap.org/copyright">(ODbL License)</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Import our scripts. -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5"></script>
+    <script src="map.js"></script>
+
+    <!-- Load CSS styling. -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</html>
