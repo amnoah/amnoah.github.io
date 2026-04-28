@@ -60,14 +60,16 @@
                         <input type="range" min="1840" max="2025" value="2025" id="maxYear">
                     </div>
 
-                    <!--
-                        Here we build a checkbox titled "activelyProposedCheckbox".
-                        It will have the text "Actively Proposed Facilities" displayed alongside it.
-                    -->
                     <label class="cbox">
                         Show Sidebar
                         <input type="checkbox" id="showSideBar" checked="checked">
                         <span class="checkmark showSideBar"></span>
+                    </label>
+
+                    <label class="cbox">
+                        Collapse Chart
+                        <input type="checkbox" id="collapseChart" checked="checked">
+                        <span class="checkmark collapseChart"></span>
                     </label>
 
                     <div class="dropdown">
@@ -89,10 +91,9 @@
                         </ul>
                     </div>
 
-                    <!-- Disabled this for rn to see if this is more enjoyable.
                     <div>
                         After clicking into the chart, hold ctrl and scroll to zoom in/out.
-                    </div>-->
+                    </div>
 
                     <div>
                         Please note, dates are rounded and data may not retain full accuracy.

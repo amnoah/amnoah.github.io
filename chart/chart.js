@@ -31,6 +31,7 @@ const minYearDisplay = document.getElementById("minYearDisplay");
 const maxYearDisplay = document.getElementById("maxYearDisplay");
 
 const sideBar = document.getElementById("showSideBar");
+const collapse = document.getElementById("collapseChart");
 
 /*
  * Display the slider's initial year on the active year display.
@@ -144,6 +145,7 @@ function updateChart() {
     var maxYear = Number(maxYearSlider.value);
 
     var showSideBar = sideBar.checked;
+    var shouldCollapse = collapse.checked;
 
     if (minYear > maxYear) {
         var swap = maxYear;
@@ -314,16 +316,15 @@ function updateChart() {
     // If the timeline doesn't yet exist, we have to create and configure it!
     if (timeline == null) {
 
-        // Each option is explained as below:
         var options = {
             stack: false,           // We want each line to be distinct.
-            //height: '75vh',         // At maximum, take up 50% of the height of the screen.
-            //verticalScroll: true,   // If there's too many elements, add a scroll bar.
             start: '1830-01-01',    // Default window minimum. 10 under our min year.
             end: '2035-01-01',      // Default window maximum. 10 over our max year.
             orientation: 'bottom',  // Elements will align to the bottom first.
             showCurrentTime: false, // Don't show the current date on the chart!
             zoomKey: 'ctrlKey',     // Require ctrl to be held to zoom.
+            height: '75vh',         // At maximum, take up 75% of the height of the screen.
+            verticalScroll: true,   // If there's too many scroll elements, add a scroll bar.
         };
 
         // Find the html element we will attach to and create the timeline.
@@ -356,6 +357,20 @@ function updateChart() {
         // If we don't remove these before we set them to the new date, vis gets upset!
         timeline.removeCustomTime('minBar');
         timeline.removeCustomTime('maxBar');
+
+        var options = {
+            stack: false,                                    // We want each line to be distinct.
+            start: '1830-01-01',                             // Default window minimum. 10 under our min year.
+            end: '2035-01-01',                               // Default window maximum. 10 over our max year.
+            orientation: 'bottom',                           // Elements will align to the bottom first.
+            showCurrentTime: false,                          // Don't show the current date on the chart!
+            zoomKey: 'ctrlKey',                              // Require ctrl to be held to zoom.
+            height: shouldCollapse? '75vh' : null,           // At maximum, take up 75% of the height of the screen.
+            verticalScroll: shouldCollapse ? true : false,   // If there's too many scroll elements, add a scroll bar.
+        };
+
+        timeline.setOptions(options);
+        timeline.redraw();
     }
 
     // Update our min/max with the new dates.
@@ -375,6 +390,7 @@ maxYearSlider.addEventListener("input", () => {
   updateChart();
 });
 sideBar.addEventListener("change", updateChart);
+collapse.addEventListener("change", updateChart);
 dropdownMenu.addEventListener('click', (event) => {
     event.preventDefault();
 
