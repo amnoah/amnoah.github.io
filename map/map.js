@@ -156,7 +156,7 @@ function updateMap() {
                 (d.Status === "previousProposal" && showExProposed)
             ) {
                 // Create a basic description using the current name and final name.
-                var description = d.Name + "<br>See " + d.FinalName;
+                var description = d.Name + "<br>See " + (d.CustomSeeName != "" ? d.CustomSeeName : d.FinalName);
 
                 //
                 if (d.PriorUse != "") {
