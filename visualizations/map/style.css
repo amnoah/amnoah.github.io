@@ -94,6 +94,9 @@
 .container input:checked ~ .previouslyProposed {
   background-color: #ff6dae;
 }
+.container input:checked ~ .averageLocation {
+  background-color: #33d6d8;
+}
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {

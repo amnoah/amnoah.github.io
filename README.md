@@ -13,4 +13,4 @@ In brief, this project is dual-licensed under the GNU Affero General Public Lice
 
 Commercial users may use this project under the AGPLv3 license.
 
-Non-commercial users may choose to use this project under either the AGPLv3 license or the PolyForm Noncommercial License.
+Non-commercial users may choose to use this project under either the AGPLv3 license or the PolyForm Noncommercial License.'

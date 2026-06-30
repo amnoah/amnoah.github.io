@@ -5,8 +5,8 @@
         <!-- Load general metadata into the site. -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-        <title>Genesee County Healthcare Chart</title>
+        <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+        <title>Genesee County Healthcare Time Chart</title>
     </head>
 
     <header>
@@ -22,17 +22,21 @@
                 <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                     <!-- Add the link to the home page. -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../">Home</a>
+                        <a class="nav-link active" aria-current="page" href="../..">Home</a>
                     </li>
 
-                    <!-- Add the link to the map. -->
+                    <!-- Add the link to the about page. -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../map/">Map</a>
+                        <a class="nav-link active" aria-current="page" href="../../about/">About</a>
                     </li>
 
-                    <!-- Add the link to the chart. -->
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="">Chart</a>
+                    <!-- Add the visualizations drop down. -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="visualizations" data-bs-toggle="dropdown" aria-expanded="false">Visualizations</a>
+                        <ul class="dropdown-menu" aria-labelledby="visualizations">
+                            <li><a class="dropdown-item" href="../map/">Map</a></li>
+                            <li><a class="dropdown-item" href="">Time Chart</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -128,7 +132,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5"></script>
     <script src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
-    <script src="chart.js"></script>
+    <script src="timechart.js"></script>
 
     <!-- Load CSS styling. -->
     <link rel="stylesheet" href="style.css">

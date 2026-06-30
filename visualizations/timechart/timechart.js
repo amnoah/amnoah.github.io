@@ -5,7 +5,7 @@
 
 let data = null;
 
-fetch('../assets/data.csv')
+fetch('../../assets/data.csv')
    .then(res => res.text())
    .then(csv => {
        data = Papa.parse(csv, {

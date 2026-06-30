@@ -5,7 +5,7 @@
         <!-- Load general metadata into the site. -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
         <title>Genesee County Healthcare Map</title>
     </head>
 
@@ -22,17 +22,21 @@
                 <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                     <!-- Add the link to the home page. -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../">Home</a>
+                        <a class="nav-link active" aria-current="page" href="../..">Home</a>
                     </li>
 
-                    <!-- Add the link to the map. -->
+                    <!-- Add the link to the about page. -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="">Map</a>
+                        <a class="nav-link active" aria-current="page" href="../../about/">About</a>
                     </li>
 
-                    <!-- Add the link to the chart. -->
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../chart/">Chart</a>
+                    <!-- Add the visualizations drop down. -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="visualizations" data-bs-toggle="dropdown" aria-expanded="false">Visualizations</a>
+                        <ul class="dropdown-menu" aria-labelledby="visualizations">
+                            <li><a class="dropdown-item" href="">Map</a></li>
+                            <li><a class="dropdown-item" href="../timechart/">Time Chart</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -111,6 +115,16 @@
                         Previously Proposed Facilities
                         <input type="checkbox" id="previouslyProposedCheckbox" checked="checked">
                         <span class="checkmark previouslyProposed"></span>
+                    </label>
+
+                    <!--
+                        Here we build a checkbox titled "averageLocationCheckbox".
+                        It will have the text "Previously Proposed Facilities" displayed alongside it.
+                    -->
+                    <label class="cbox">
+                        Average Location
+                        <input type="checkbox" id="averageLocationCheckbox">
+                        <span class="checkmark averageLocation"></span>
                     </label>
                 </div>
                 <div>

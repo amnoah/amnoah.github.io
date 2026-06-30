@@ -30,8 +30,8 @@ var allMarkers = L.layerGroup().addTo(map);
  */
 
 var activeIcon = L.icon({
-  iconUrl: '../assets/icons/marker-icon-green.svg',
-  shadowUrl: '../assets/icons/marker-shadow.svg',
+  iconUrl: '../../assets/icons/marker-icon-green.svg',
+  shadowUrl: '../../assets/icons/marker-shadow.svg',
   iconSize: [25,41],
   iconAnchor: [12,41],
   popupAnchor: [1,-34],
@@ -39,8 +39,8 @@ var activeIcon = L.icon({
 });
 
 var closedIcon = L.icon({
-  iconUrl: '../assets/icons/marker-icon-red.svg',
-  shadowUrl: '../assets/icons/marker-shadow.svg',
+  iconUrl: '../../assets/icons/marker-icon-red.svg',
+  shadowUrl: '../../assets/icons/marker-shadow.svg',
   iconSize: [25,41],
   iconAnchor: [12,41],
   popupAnchor: [1,-34],
@@ -48,8 +48,8 @@ var closedIcon = L.icon({
 });
 
 var movedIcon = L.icon({
-  iconUrl: '../assets/icons/marker-icon-yellow.svg',
-  shadowUrl: '../assets/icons/marker-shadow.svg',
+  iconUrl: '../../assets/icons/marker-icon-yellow.svg',
+  shadowUrl: '../../assets/icons/marker-shadow.svg',
   iconSize: [25,41],
   iconAnchor: [12,41],
   popupAnchor: [1,-34],
@@ -57,8 +57,8 @@ var movedIcon = L.icon({
 });
 
 var activeProposalIcon = L.icon({
-  iconUrl: '../assets/icons/marker-icon-violet.svg',
-  shadowUrl: '../assets/icons/marker-shadow.svg',
+  iconUrl: '../../assets/icons/marker-icon-violet.svg',
+  shadowUrl: '../../assets/icons/marker-shadow.svg',
   iconSize: [25,41],
   iconAnchor: [12,41],
   popupAnchor: [1,-34],
@@ -66,8 +66,17 @@ var activeProposalIcon = L.icon({
 });
 
 var previousProposalIcon = L.icon({
-  iconUrl: '../assets/icons/marker-icon-pink.svg',
-  shadowUrl: '../assets/icons/marker-shadow.svg',
+  iconUrl: '../../assets/icons/marker-icon-pink.svg',
+  shadowUrl: '../../assets/icons/marker-shadow.svg',
+  iconSize: [25,41],
+  iconAnchor: [12,41],
+  popupAnchor: [1,-34],
+  shadowSize: [41,41]
+});
+
+var averageIcon = L.icon({
+  iconUrl: '../../assets/icons/marker-icon-cyan.svg',
+  shadowUrl: '../../assets/icons/marker-shadow.svg',
   iconSize: [25,41],
   iconAnchor: [12,41],
   popupAnchor: [1,-34],
@@ -87,26 +96,6 @@ const statusIcons = {
 };
 
 /*
- * Parse the CSV data file using Papa Parse library.
- * It won't be immediately loaded, so use a promise to execute code once loaded.
- */
-
-let data = null;
-
-fetch('../assets/data.csv')
-   .then(res => res.text())
-   .then(csv => {
-       data = Papa.parse(csv, {
-           header: true,
-           comments: true,
-           skipEmptyLines: true
-           }).data;
-
-       updateMap();
-   }
-);
-
-/*
  * Find each HTML element we want to control..
  */
 
@@ -118,12 +107,33 @@ const closed = document.getElementById("closedCheckbox");
 const moved = document.getElementById("movedCheckbox");
 const proposed = document.getElementById("activelyProposedCheckbox");
 const exProposed = document.getElementById("previouslyProposedCheckbox");
+const avLocation = document.getElementById("averageLocationCheckbox");
 
 /*
  * Display the slider's initial year on the active year display.
  */
 
 output.innerHTML = slider.value;
+
+/*
+ * Parse the CSV data file using Papa Parse library.
+ * It won't be immediately loaded, so use a promise to execute code once loaded.
+ */
+
+let data = null;
+
+fetch('../../assets/data.csv')
+   .then(res => res.text())
+   .then(csv => {
+       data = Papa.parse(csv, {
+           header: true,
+           comments: true,
+           skipEmptyLines: true
+           }).data;
+
+       updateMap();
+   }
+);
 
 /*
  * Handle updating map on data changes.
@@ -142,12 +152,21 @@ function updateMap() {
     const showMoved = moved.checked;
     const showProposed = proposed.checked;
     const showExProposed = exProposed.checked;
+    const showAvgLocation = avLocation.checked;
 
     // Remove all current markers from the map.
     allMarkers.clearLayers();
 
+    let totalLat = 0, totalLong = 0, activeCount = 0;
+
     data.forEach(d => {
         if (year >= d.YearStart && year < d.YearEnd) {
+            if (showAvgLocation && d.Status === "active") {
+                totalLat += Number(d.Latitude);
+                totalLong += Number(d.Longitude);
+                activeCount++;
+            }
+
             if (
                 (d.Status === "active" && showActive) ||
                 (d.Status === "closed" && showClosed) ||
@@ -178,6 +197,18 @@ function updateMap() {
             }
         }
     });
+
+    if (showAvgLocation && activeCount > 0) {
+        let avgLat = totalLat / activeCount, avgLong = totalLong / activeCount;
+        // Build the marker that will be added to the map.
+        const marker = L.marker(
+            [avgLat, avgLong],
+            { icon: averageIcon }
+        ).bindPopup("Average location of active facilities.");
+
+        // And finally add the marker!
+        allMarkers.addLayer(marker);
+    }
 }
 
 
@@ -194,3 +225,4 @@ closed.addEventListener("change", updateMap);
 moved.addEventListener("change", updateMap);
 proposed.addEventListener("change", updateMap);
 exProposed.addEventListener("change", updateMap);
+avLocation.addEventListener("change", updateMap);
