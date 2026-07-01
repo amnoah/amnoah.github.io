@@ -23,7 +23,7 @@ fetch('../../assets/data.csv')
  * Find each HTML element we want to control.
  */
 
-const dropdownMenu = document.querySelector('.dropdown-menu');
+const dropdownMenu = document.getElementById("sortDropdown");
 const toggleButton = document.querySelector('.dropdown-toggle');
 const minYearSlider = document.getElementById("minYear");
 const maxYearSlider = document.getElementById("maxYear");
