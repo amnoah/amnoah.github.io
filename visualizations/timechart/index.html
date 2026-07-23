@@ -9,13 +9,25 @@
         <title>Genesee County Healthcare Time Chart</title>
     </head>
 
+    <!-- Import our scripts. -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5"></script>
+    <script src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <script src="timechart.js" defer></script>
+
+    <!-- Load CSS styling. -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
+
+
     <header>
         <!-- Prepare the navigation bar. -->
         <nav class="navbar-expand navbar-dark bg-dark" aria-label="header">
             <div class="container-fluid">
                 <!-- Add the title. -->
                 <a href="#" class="navbar-brand d-flex align-items-center">
-                    <strong>Genesee County Healthcare Project</strong>
+                    <strong>Genesee County Medical History Project</strong>
                 </a>
 
                 <!-- Add all the page navigation layer. -->
@@ -32,7 +44,7 @@
 
                     <!-- Add the visualizations drop down. -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="visualizations" data-bs-toggle="dropdown" aria-expanded="false">Visualizations</a>
+                        <a class="nav-link active dropdown-toggle" href="#" id="visualizations" data-bs-toggle="dropdown" aria-expanded="false">Visualizations</a>
                         <ul class="dropdown-menu" aria-labelledby="visualizations">
                             <li><a class="dropdown-item" href="../map/">Map</a></li>
                             <li><a class="dropdown-item" href="">Time Chart</a></li>
@@ -44,6 +56,20 @@
     </header>
 
     <main>
+        <!-- Add a disclaimer at the top of the page that this is unfinished. -->
+        <section class="py-0 container">
+            <div class="alert alert-danger mt-5">
+                <h4 class="alert-heading">PLEASE NOTE: This is still in development</h4>
+
+                <p class="mb-1">
+                    This may display some inaccurate data or be missing data as it is still
+                    in development. Even so, please report major issues under the GitHub
+                    issues tab.
+                </p>
+
+            </div>
+        </section>
+
         <!-- Begin building main page content. -->
         <section class="py-5 container">
             <!-- Create a row to place the vis-timeline display titled "chart". -->
@@ -126,15 +152,4 @@
             </div>
         </section>
     </footer>
-
-    <!-- Import our scripts. -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/papaparse@5"></script>
-    <script src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
-    <script src="timechart.js"></script>
-
-    <!-- Load CSS styling. -->
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
 </html>

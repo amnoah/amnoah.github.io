@@ -125,7 +125,6 @@
 
 /* Set basic characteristics of map. */
 #map {
-  position: absolute;
   height: 500px;
   width: 90vw;
   max-width: 1200px;
