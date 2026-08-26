@@ -34,6 +34,13 @@ const sideBar = document.getElementById("showSideBar");
 const collapse = document.getElementById("collapseChart");
 
 /*
+ * For clarity, don't display the side bar on mobile devices.
+ */
+
+if (window.innerWidth < window.innerHeight) sideBar.checked = false;
+
+
+/*
  * Display the slider's initial year on the active year display.
  */
 
@@ -128,7 +135,7 @@ function getRandomColor(seed) {
  * Handle updating map on data changes.
  */
 
-var sortMethod = "a";
+var sortMethod = "Chronological";
 var timeline = null;
 var min, max;
 
