@@ -324,14 +324,14 @@ function updateChart() {
     if (timeline == null) {
 
         var options = {
-            stack: false,           // We want each line to be distinct.
-            start: '1830-01-01',    // Default window minimum. 10 under our min year.
-            end: '2035-01-01',      // Default window maximum. 10 over our max year.
-            orientation: 'bottom',  // Elements will align to the bottom first.
-            showCurrentTime: false, // Don't show the current date on the chart!
-            zoomKey: 'ctrlKey',     // Require ctrl to be held to zoom.
-            height: '75vh',         // At maximum, take up 75% of the height of the screen.
-            verticalScroll: true,   // If there's too many scroll elements, add a scroll bar.
+            stack: false,                                  // We want each line to be distinct.
+            start: '1830-01-01',                           // Default window minimum. 10 under our min year.
+            end: '2035-01-01',                             // Default window maximum. 10 over our max year.
+            orientation: 'bottom',                         // Elements will align to the bottom first.
+            showCurrentTime: false,                        // Don't show the current date on the chart!
+            zoomKey: 'ctrlKey',                            // Require ctrl to be held to zoom.
+            height: shouldCollapse ? '75vh' : null,        // At maximum, take up 75% of the height of the screen.
+            verticalScroll: shouldCollapse ? true : false, // If there's too many scroll elements, add a scroll bar.
         };
 
         // Find the html element we will attach to and create the timeline.
